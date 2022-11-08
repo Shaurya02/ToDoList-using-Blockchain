@@ -140,3 +140,6 @@ Google Chrome extension turning your browser into a blockchain browser. Metamask
 
 ## Future
 * Upgrade User interface 
+* Adding time function to see when a task was completed
+* Adding deadline function to the project 
+* Adding option to make multiple lists based on similar grouping of items
