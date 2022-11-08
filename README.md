@@ -103,7 +103,7 @@ contract TodoList {
   }
 }
 ```
-<img width="1195" alt="Screen Shot 2021-06-26 at 6 29 06 PM" src="public/TodoList.jpg">
+<img width="1195" alt="Screen Shot 2021-06-26 at 6 29 06 PM" src="./public/TodoList.jpg">
 
 ## Testing
 ```bash
@@ -123,12 +123,12 @@ it ('toggles tasks completion', async () => {
 })
 ```
  
-<img width="314" alt="Screen Shot 2021-06-26 at 5 55 31 PM" src="public/Testing.jpg">
+<img width="314" alt="Screen Shot 2021-06-26 at 5 55 31 PM" src="./public/Testing.jpg">
 
 ## Ganache Personal Blockchain 
 Local development blockchain used to mimic the behavior of a public blockchain. Allows for deploying smart contracts, develop applications, and run tests.
 
-<img width="1195" alt="Screen Shot 2021-06-26 at 6 29 06 PM" src="public/Ganache.jpg">
+<img width="1195" alt="Screen Shot 2021-06-26 at 6 29 06 PM" src="./public/Ganache.jpg">
 
 ## Metamask
 
