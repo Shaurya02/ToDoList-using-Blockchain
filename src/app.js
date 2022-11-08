@@ -10,7 +10,7 @@ App = {
       await App.render()
       web3.eth.defaultAccount = web3.eth.accounts[0]
     },
-
+    //web3.js is a library that lets us connect and communicate with the blockchain and in this communicate with metamask.
     loadWeb3: async () => {
       if (typeof web3 !== 'undefined') {
         App.web3Provider = web3.currentProvider
@@ -57,21 +57,21 @@ App = {
       // Hydrate the smart contract with values from the blockchain
       App.todoList = await App.contracts.TodoList.deployed()
     },
-  
+    //creates a new task
     createTask: async () => {
       App.setLoading(true)
       const content = $('#newTask').val()
       await App.todoList.createTask(content)
       window.location.reload()
     },
-
+    //changes boolean completed to true
     toggleCompleted: async (e) => {
       App.setLoading(true)
       const taskId = e.target.name
       await App.todoList.toggleCompleted(taskId)
       window.location.reload()
     },
-
+    //renders the front end of the client-side webpage
     render: async () => {
       // Prevent double render
       if (App.loading) {
@@ -90,7 +90,7 @@ App = {
       // Update loading state
       App.setLoading(false)
     },
-  
+    //renders the tasks lists
     renderTasks: async () => {
       // Load the total task count from the blockchain
       const taskCount = await App.todoList.taskCount()
@@ -123,7 +123,7 @@ App = {
         $newTaskTemplate.show()
       }
     },
-  
+    //displays a loading message while interacting with the blockchain network or metamask
     setLoading: (boolean) => {
       App.loading = boolean
       const loader = $('#loader')
@@ -137,6 +137,7 @@ App = {
       }
     }
 }
+//loads the application
 $(() => {
   $(window).load(() => {
     App.load()

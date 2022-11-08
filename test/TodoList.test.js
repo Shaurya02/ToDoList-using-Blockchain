@@ -12,7 +12,7 @@ contract('TodoList', (accounts) => {
     assert.notEqual(address, null)
     assert.notEqual(address, undefined)
   })
-
+  //test to see if the default constructor list item is loading successfully
   it('lists tasks', async () => { 
     const taskCount = await this.todoList.taskCount() 
     const task = await this.todoList.tasks(taskCount)
@@ -21,6 +21,7 @@ contract('TodoList', (accounts) => {
     assert.equal(task.completed, false) 
     assert.equal(taskCount.toNumber(), 1)
   })
+  //test to see if tasks are getting created successfully
   it('creates tasks', async () => {
     const result = await this.todoList.createTask('A new task')
     const taskCount = await this.todoList.taskCount()
@@ -30,6 +31,7 @@ contract('TodoList', (accounts) => {
     assert.equal(event.content, 'A new task')
     assert.equal(event.completed, false)
   })
+  //checks to see if tasks are being completed when their checkbox is toggeled
   it('toggles task completion', async () => {
     const result = await this.todoList.toggleCompleted(1)
     const task = await this.todoList.tasks(1)
