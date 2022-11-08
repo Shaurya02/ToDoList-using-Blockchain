@@ -1,0 +1,40 @@
+main {
+  margin-top: 60px;
+}
+#content {
+  display: none;
+}
+form {
+  width: 350px;
+  margin-bottom: 10px;
+}
+ul{
+  margin-bottom: 0px;
+}
+#completedTaskList .content {
+  color: grey;
+  text-decoration: line-through;
+} 
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+  
+.box {
+  max-width: 600px;
+  margin: 44px auto;
+  color: white;
+  background: #f5ba13;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.account{
+    text-decoration: none;
+    color: white;
+}
+.account:hover{
+    text-decoration: none;
+    color: white;
+}
